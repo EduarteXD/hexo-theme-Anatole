@@ -1,27 +1,60 @@
 :root {
+	/* toggler */
 	--light: #d8dbe0;
 	--dayLight: #f8f8f8;
 	--dark: #28292c;
 	--sun: #ff9;
-	--link: rgb(27, 129, 112);
-	--link-hover: rgb(24, 94, 82);
+
+	/* light theme */
+	--bgcolor: #fff;
+	--content: #0000007f;
+	--divider: #f2f2f2;
+
+	--h1: var(--content);
+	--h2: #5f5f5f;
+	--h3: #464646;
+	--h4: #5F5F5F;
+	--a:  #5f5f5f;
+	--p:  #5f5f5f;
+
+	--identifier: #444;
+
+	--title: #464646;
+	--subtitle: #565654;
+	--lstitle: #666666;
+	--listing: #8F8F8F;
 }
 
 html {
 	-webkit-font-smoothing: antialiased;
 	transition: all 0.2s ease-out;
-	background-color: #fff;
+	background-color: var(--bgcolor);
 }
 
+#dark-mode {
+	--bgcolor: #1a1a1a;
+	--content: rgba(255, 255, 255, 0.8);
+	--divider: #444;
+
+	--h1: #fff;
+	--h2: #eee;
+	--h3: #ddd;
+	--h4: #ccc;
+	--a:  #ddd;
+	--p:  #ddd;
+
+	--title: #eee;
+	--subtitle: #ddd;
+	--lstitle: #fff;
+	--listing: #eee;
+}
+
+/*
 html[id='dark-mode'] {
 	background-color: #1a1a1a;
 
 	img {
 		filter: drop-shadow(0 0 3px var(--dayLight));
-	}
-
-	iframe {
-		filter: invert(.9) hue-rotate(180deg);
 	}
 
 	body {
@@ -34,10 +67,10 @@ html[id='dark-mode'] {
 
 		.nav {
 			a {
-				color: #eee;
+				color: var(--h2);
 
 				.current {
-					color: #ccc;
+					color: var(--h4);
 				}
 			}
 		}
@@ -46,30 +79,30 @@ html[id='dark-mode'] {
 	.post {
 		.post-title {
 			h1 {
-				color: #fff;
+				color: var(--h1);
 			}
 
 			h2 {
-				color: #eee;
+				color: var(--h2);
 			}
 
 			a {
-				color: #ddd;
+				color: var(--a);
 			}
 		}
 
 		.post-content {
 			h3 {
-				color: #ddd;
+				color: var(--h3);
 			}
 
 			h4 {
-				color: #ddd;
+				color: var(--h4);
 			}
 		}
 
 		.post-footer {
-			border-bottom: 1px solid #444;
+			border-bottom: 1px solid var(--identifier);
 		}
 	}
 
@@ -109,9 +142,10 @@ html[id='dark-mode'] {
 		}
 	}
 }
+*/
 
 body {
-	color: rgba(0, 0, 0, 0.5);
+	color: var(--content);
 	font-family: 'PingHei', 'PingFang SC', Helvetica Neue, 'Work Sans', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
 	font-size: 15px;
 	width: 100%;
@@ -144,7 +178,6 @@ a:visited {
 a:hover,
 a:active {
 	color: #4786D6;
-
 }
 
 /*basic styles ends*/
@@ -231,9 +264,6 @@ a:active {
 
 /*animation ends*/
 
-
-
-
 .content {
 	height: auto;
 	float: right;
@@ -246,9 +276,9 @@ a:active {
 	position: fixed;
 	right: 0;
 	z-index: 3;
-	background-color: #fff;
+	background-color: var(--bgcolor);
 	height: 60px;
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 1px solid var(--divider);
 	transition: all 0.2s ease-out;
 
 	.nav {
@@ -318,7 +348,7 @@ a:active {
 	left: 0;
 	position: fixed;
 	z-index: 4;
-	border-right: 1px solid #f2f2f2;
+	border-right: 1px solid var(--divider);
 	transition: all 0.2s ease-out;
 
 	.logo-title {
@@ -328,7 +358,7 @@ a:active {
 
 		.description {
 			font-size: 14px;
-			color: #565654;
+			color: var(--subtitle);
 		}
 
 
@@ -348,7 +378,7 @@ a:active {
 
 			a {
 				text-decoration: none;
-				color: #464646;
+				color: var(--title);
 				font-size: 2rem;
 				font-weight: bold;
 			}
@@ -373,7 +403,7 @@ a:active {
 		}
 
 		a {
-			color: #565654;
+			color: var(--subtitle);
 		}
 
 		a:hover {
@@ -401,7 +431,7 @@ a:active {
 			font-size: 28px;
 			line-height: 1;
 			font-weight: 600;
-			color: #5f5f5f;
+			color: var(--h2);
 
 		}
 
@@ -410,7 +440,7 @@ a:active {
 			letter-spacing: 1px;
 			line-height: 1;
 			font-weight: 600;
-			color: #464646;
+			color: var(--h3);
 			font-size: 22px;
 			margin: 0;
 
@@ -419,7 +449,7 @@ a:active {
 		a {
 			text-decoration: none;
 			letter-spacing: 1px;
-			color: #5f5f5f;
+			color: var(--a);
 
 			&:hover {
 				text-decoration: underline;
@@ -440,20 +470,20 @@ a:active {
 		}
 
 		h3 {
-			color: #5F5F5F;
+			color: var(--h3);
 			font-size: 22px;
 			font-weight: 600;
 		}
 
 		h4 {
-			color: #5F5F5F;
+			color: var(--h4);
 			font-size: 16px;
 		}
 	}
 
 	.post-footer {
 		padding: 0 0 30px 0;
-		border-bottom: 1px solid #f2f2f2;
+		border-bottom: 1px solid var(--divider);
 		transition: all 0.2s ease-out;
 
 		.meta {
@@ -523,7 +553,7 @@ a:active {
 .pagination {
 	margin: 30px;
 	padding: 0px 0 56px 0;
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 1px solid var(--divider);
 	transition: all 0.2s ease-out;
 
 	ul {
@@ -581,7 +611,7 @@ a:active {
 
 #disqus_thread {
 	margin: 30px;
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 1px solid var(--divider);
 }
 
 .footer {
@@ -623,7 +653,7 @@ a:active {
 
 	.listing-title {
 		font-size: 24px;
-		color: #666666;
+		color: var(--lstitle);
 		font-weight: 600;
 		line-height: 2.2em;
 	}
@@ -640,7 +670,7 @@ a:active {
 			}
 
 			a {
-				color: #8F8F8F;
+				color: var(--listing);
 
 				&:hover {
 					color: #4786D6;

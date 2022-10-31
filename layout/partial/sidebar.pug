@@ -39,12 +39,23 @@
       label
         input(type="checkbox",style="position: absolute;display: none;",checked,id='toggler',onchange=`(function(){
           let html = document.getElementsByTagName('html')[0];
+          let frame = document.getElementsByTagName('iframe')[0];
           if (html.id !== 'dark-mode') {
             html.id = 'dark-mode';
-            window.location.hash="#dark";
+            window.location.hash = "#dark";
+            if (frame) {
+              frame.onload = () => {
+                frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
+              }
+            }
           } else {
             html.id = '';
             window.location.hash="";
+            if (frame) {
+              frame.onload = () => {
+                frame.contentWindow.postMessage({type:"set-theme", theme:"github-light"}, "*");
+              }
+            }
           }
         })()`)
         span.slider
