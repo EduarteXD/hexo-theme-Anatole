@@ -811,7 +811,8 @@ input:checked ~ .slider {
 input:checked ~ .slider::before {
   transform: translateX(95px);
   background-color: var(--sun);
-  box-shadow: none;
+  box-shadow: 0 0 5px val(--sun);
+  backdrop-filter: brightness(5);
 }
 
 /*# sourceMappingURL=style.css.map */
