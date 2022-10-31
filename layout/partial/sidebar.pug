@@ -44,6 +44,7 @@
             html.id = 'dark-mode';
             window.location.hash = "#dark";
             if (frame) {
+              frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
               frame.onload = () => {
                 frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
               }
@@ -52,9 +53,7 @@
             html.id = '';
             window.location.hash="";
             if (frame) {
-              frame.onload = () => {
-                frame.contentWindow.postMessage({type:"set-theme", theme:"github-light"}, "*");
-              }
+              frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
             }
           }
         })()`)
