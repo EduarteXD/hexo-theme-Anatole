@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ben02/hexo-theme-Anatole"
+    "url": "https://github.com/EduarteXD/hexo-theme-Anatole"
   },
   "keywords": [
     "hexo",
     "theme",
     "Anatole"
   ],
-  "author": "Ben Wong",
+  "author": "Eduarte",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ben02/hexo-theme-Anatole/issues"
+    "url": "https://github.com/EduarteXD/hexo-theme-Anatole/issues"
   },
-  "homepage": "https://github.com/Ben02/hexo-theme-Anatole#readme"
+  "homepage": "https://github.com/EduarteXD/hexo-theme-Anatole#readme"
 }

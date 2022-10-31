@@ -14,13 +14,13 @@ mixin make_post(item, is_detail)
 				p!= truncate(strip_html(summary), {length: 160})
 		.post-footer: .meta
 			.info
-				i.fa.fa-sun-o
+				i.fa-solid.fa-sun
 				span.date= date(item.date, 'YYYY-MM-DD')
 				if theme.duoshuo || theme.disqus
-					i.fa.fa-comment-o
+					i.fa.fa-comment
 					a(href= url_for(item.path + "#comments"))= __('Comments')
 				if item.tags
-					i.fa.fa-tag
+					i.fa-solid.fa-tag
 					- item.categories.sort('posts').each(function(item) {
 							a.tag(href=config.root + item.path, title= item.name)= item.name + " "
 					- });
