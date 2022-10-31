@@ -1,6 +1,6 @@
 .sidebar.animated.fadeInDown
   .logo-title
-    .title
+    .title(style="margin-top: 10px")
       img(src= url_for('images/logo@2x.png'),style="width:127px;")
       h3(title="")
         a(href="/")= config.title
@@ -33,4 +33,9 @@
       li
         a(href="http://github.com/" + theme.github)
           i.fa-brands.fa-github
+
+  div(class="toggle-switch")
+    label
+      input(type="checkbox",style="position: absolute;display: none;")
+      span(class="slider")
   include footer
