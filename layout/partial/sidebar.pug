@@ -41,8 +41,10 @@
           let html = document.getElementsByTagName('html')[0];
           if (html.id !== 'dark-mode') {
             html.id = 'dark-mode';
+            window.location.hash="#dark";
           } else {
             html.id = '';
+            window.location.hash="";
           }
         })()`)
         span.slider
