@@ -13,7 +13,10 @@ function interceptClickEvent(e) {
 document.addEventListener('click', interceptClickEvent);
 
 if (window.location.hash === '#dark') {
-    document.getElementById('toggler').ckick();
     let html = document.getElementsByTagName('html')[0];
-    html.id = 'dark-mode';
+    html.style = 'transition: none';
+    document.getElementById('toggler').click();
+    setTimeout(()=> {
+        html.removeAttribute('style')
+    }, 100);
 }

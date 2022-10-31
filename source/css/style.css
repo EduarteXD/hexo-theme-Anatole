@@ -54,6 +54,12 @@ html[id=dark-mode] .sidebar .social-links a {
 html[id=dark-mode] .pagination {
   border-bottom: 1px solid #444;
 }
+html[id=dark-mode] .list-with-title .listing-title {
+  color: #fff;
+}
+html[id=dark-mode] .list-with-title .listing {
+  color: #eee;
+}
 
 body {
   color: rgba(0, 0, 0, 0.5);
@@ -176,6 +182,7 @@ a:active {
   background-color: #fff;
   height: 60px;
   border-bottom: 1px solid #f2f2f2;
+  transition: all 0.2s ease-out;
 }
 .page-top .nav {
   list-style: none;
