@@ -34,8 +34,16 @@
         a(href="http://github.com/" + theme.github)
           i.fa-brands.fa-github
 
-  div(class="toggle-switch")
-    label
-      input(type="checkbox",style="position: absolute;display: none;")
-      span(class="slider")
+  div(style="width:100%")
+    .toggle-switch(id="toggle-switch")
+      label
+        input(type="checkbox",style="position: absolute;display: none;",checked,id='toggler',onchange=`(function(){
+          let html = document.getElementsByTagName('html')[0];
+          if (html.id !== 'dark-mode') {
+            html.id = 'dark-mode';
+          } else {
+            html.id = '';
+          }
+        })()`)
+        span.slider
   include footer
