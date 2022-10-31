@@ -77,21 +77,17 @@ if theme.utterances
     #utter() 
     script.
         (function() {
-            var utterScript = document.createElement('script');
+            let utterScript = document.createElement('script');
             utterScript.async = true;
             utterScript.src = 'https://utteranc.es/client.js';
             utterScript.type = 'text/javascript';
-            utterScript.onload = () => {
-                if (window.location.hash === "#dark") {
-                    let frame = document.getElementsByTagName('iframe')[0];
-                    frame.onload = () => {
-                        frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
-                    }
-                }
-            }
             utterScript.setAttribute('repo', '#{theme.utterances.repo}');
             utterScript.setAttribute ('issue-term', 'pathname');
-            utterScript.setAttribute('theme', 'github-light');
+            if (window.location.hash === "#dark") {
+                utterScript.setAttribute('theme', 'github-dark');
+            } else {
+                utterScript.setAttribute('theme', 'github-light');
+            }
             utterScript.setAttribute('crossorigin', 'anonymous');
             document.getElementById('utter').appendChild(utterScript);
         })();

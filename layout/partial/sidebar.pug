@@ -45,9 +45,6 @@
             window.location.hash = "#dark";
             if (frame) {
               frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
-              frame.onload = () => {
-                frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
-              }
             }
           } else {
             html.id = '';
