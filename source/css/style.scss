@@ -7,11 +7,11 @@ html {
 html[id='dark-mode'] {
 	background-color: #1a1a1a;
 
-	body{
-		color:rgba(255, 255, 255, 0.8);
+	body {
+		color: rgba(255, 255, 255, 0.8);
 	}
 
-	.page-top{
+	.page-top {
 		background-color: #1a1a1a;
 		border-bottom: 1px solid #444;
 
@@ -26,26 +26,26 @@ html[id='dark-mode'] {
 		}
 	}
 
-	.post{
+	.post {
 		.post-title {
 			h1 {
 				color: #fff;
 			}
-	
+
 			h2 {
 				color: #eee;
 			}
-			
+
 			a {
 				color: #ddd;
 			}
 		}
-	
+
 		.post-content {
 			h3 {
 				color: #ddd;
 			}
-	
+
 			h4 {
 				color: #ddd;
 			}
@@ -56,7 +56,7 @@ html[id='dark-mode'] {
 		}
 	}
 
-	.sidebar{
+	.sidebar {
 		border-right: 1px solid #444;
 
 		.logo-title {
@@ -302,6 +302,7 @@ a:active {
 	position: fixed;
 	z-index: 4;
 	border-right: 1px solid #f2f2f2;
+	transition: all 0.2s ease-out;
 
 	.logo-title {
 		text-align: center;
@@ -436,7 +437,7 @@ a:active {
 	.post-footer {
 		padding: 0 0 30px 0;
 		border-bottom: 1px solid #f2f2f2;
-
+		transition: all 0.2s ease-out;
 
 		.meta {
 			max-width: 100%;
@@ -502,13 +503,11 @@ a:active {
 
 }
 
-
-
-
 .pagination {
 	margin: 30px;
 	padding: 0px 0 56px 0;
 	border-bottom: 1px solid #f2f2f2;
+	transition: all 0.2s ease-out;
 
 	ul {
 		list-style: none;

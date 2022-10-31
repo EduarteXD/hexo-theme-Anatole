@@ -241,6 +241,7 @@ a:active {
   position: fixed;
   z-index: 4;
   border-right: 1px solid #f2f2f2;
+  transition: all 0.2s ease-out;
 }
 .sidebar .logo-title {
   text-align: center;
@@ -343,6 +344,7 @@ a:active {
 .post .post-footer {
   padding: 0 0 30px 0;
   border-bottom: 1px solid #f2f2f2;
+  transition: all 0.2s ease-out;
 }
 .post .post-footer .meta {
   max-width: 100%;
@@ -396,6 +398,7 @@ a:active {
   margin: 30px;
   padding: 0px 0 56px 0;
   border-bottom: 1px solid #f2f2f2;
+  transition: all 0.2s ease-out;
 }
 .pagination ul {
   list-style: none;
