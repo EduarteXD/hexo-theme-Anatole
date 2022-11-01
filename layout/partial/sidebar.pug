@@ -47,8 +47,8 @@
               frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
             }
           } else {
-            html.id = '';
-            window.location.hash="";
+            html.id = 'light-mode';
+            window.location.hash="#light";
             if (frame) {
               frame.contentWindow.postMessage({type:"set-theme", theme:"github-light"}, "*");
             }

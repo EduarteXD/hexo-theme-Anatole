@@ -19,4 +19,6 @@ if (window.location.hash === '#dark') {
     setTimeout(()=> {
         html.removeAttribute('style')
     }, 100);
+} else {
+    window.location.hash = "#light";
 }
