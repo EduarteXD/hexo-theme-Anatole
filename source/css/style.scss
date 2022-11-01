@@ -839,6 +839,7 @@ a.btn {
 /* positioning the comment widget */
 .utterances {
 	margin-left: 30px;
+	width: calc(100% - 60px);
 }
 
 /* dark mode toggler */

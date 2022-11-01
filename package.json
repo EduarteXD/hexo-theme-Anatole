@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass --no-source-map ./source/css/style.scss ./source/css/style.css --style compressed &sass --no-source-map ./source/css/blog_basic.scss ./source/css/blog_basic.css --style compressed"
+    "compile": "node tasks/compile.js"
   },
   "repository": {
     "type": "git",

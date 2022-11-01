@@ -1,7 +1,8 @@
 :root {
   --basic-primary: #eee;
   --basic-secondary: #4a4a4a;
-  --basic-bgcolor: #f8f8f8;
+
+  --basic-code-bgcolor: #f8f8f8;
 
   --basic-tip: #f66;
   --basic-codeType: #ccc;
@@ -11,9 +12,10 @@
 #dark-mode {
   --basic-primary: #2b2b2b;
   --basic-secondary: #c2c2c2;
-  --basic-bgcolor: #1a1a1a;
 
-  --basic-plainText: #bdbdbd;
+  --basic-code-bgcolor: #3c3c3c;
+
+  --basic-plainText: #dfdfdf;
 }
 
 .post-content .tip {
@@ -23,7 +25,7 @@
   border-left: 4px solid var(--basic-tip);
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-  background-color: var(--basic-bgcolor);
+  background-color: var(--basic-code-bgcolor);
 }
 
 .post-content .tip:before {
@@ -56,7 +58,7 @@
 
 pre {
   font-size: 0.8em !important;
-  background-color: var(--basic-bgcolor) !important;
+  background-color: var(--basic-code-bgcolor) !important;
   font-family: 'Roboto Mono', 'Lucida Console', 'Trebuchet MS', 'Courier New', Monaco, courier, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Jhenghei', 'Microsoft YaHei', monospace !important
 }
 
@@ -65,7 +67,7 @@ figure.highlight {
   margin: 1em 0 !important;
   border-radius: 2px !important;
   line-height: 1.1em !important;
-  background-color: var(--basic-bgcolor) !important;
+  background-color: var(--basic-code-bgcolor) !important;
   overflow-x: auto !important
 }
 
@@ -88,104 +90,45 @@ figure.highlight .code pre {
   margin: 0 !important
 }
 
-figure.highlight.html .code:after,
-figure.highlight.js .code:after,
-figure.highlight.bash .code:after,
-figure.highlight.css .code:after,
-figure.highlight.scss .code:after,
-figure.highlight.diff .code:after,
-figure.highlight.java .code:after,
-figure.highlight.xml .code:after,
-figure.highlight.python .code:after,
-figure.highlight.json .code:after,
-figure.highlight.swift .code:after,
-figure.highlight.ruby .code:after,
-figure.highlight.perl .code:after,
-figure.highlight.php .code:after,
-figure.highlight.c .code:after,
-figure.highlight.cpp .code:after {
-  position: absolute !important;
-  top: 0 !important;
-  right: 0 !important;
-  color: var(--basic-codeType) !important;
-  text-align: right !important;
-  font-size: 0.75em !important;
-  padding: 5px 10px 0 !important;
-  line-height: 15px !important;
-  height: 15px !important;
-  font-weight: 600 !important
+$supported-lang: 'html','js','bash','css','scss','diff','java','xml','python','json',
+            'swift','ruby','perl','php','c','cpp','rust','javascript','sql','objectivec',
+            'makefile','go','ini';
+
+$supported-lang-selector: ();
+
+@each $lang in $supported-lang {
+  @if $lang == nth($supported-lang,1) {
+    $supported-lang-selector: append($supported-lang-selector, unquote("figure.highlight.#{$lang}"))
+  } @else {
+    $supported-lang-selector: append($supported-lang-selector, unquote(",figure.highlight.#{$lang}"))
+  }
 }
 
-figure.highlight.html .code:after {
-  content: "HTML"
+#{$supported-lang-selector} {
+  .code:after {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    color: var(--basic-codeType) !important;
+    text-align: right !important;
+    font-size: 0.75em !important;
+    padding: 5px 10px 0 !important;
+    line-height: 15px !important;
+    height: 15px !important;
+    font-weight: 600 !important;
+  }
 }
 
-figure.highlight.js .code:after {
-  content: "JS"
-}
-
-figure.highlight.bash .code:after {
-  content: "BASH"
-}
-
-figure.highlight.css .code:after {
-  content: "CSS"
-}
-
-figure.highlight.scss .code:after {
-  content: "SCSS"
-}
-
-figure.highlight.diff .code:after {
-  content: "DIFF"
-}
-
-figure.highlight.java .code:after {
-  content: "JAVA"
-}
-
-figure.highlight.xml .code:after {
-  content: "XML"
-}
-
-figure.highlight.python .code:after {
-  content: "PYTHON"
-}
-
-figure.highlight.json .code:after {
-  content: "JSON"
-}
-
-figure.highlight.swift .code:after {
-  content: "SWIFT"
-}
-
-figure.highlight.ruby .code:after {
-  content: "RUBY"
-}
-
-figure.highlight.perl .code:after {
-  content: "PERL"
-}
-
-figure.highlight.php .code:after {
-  content: "PHP"
-}
-
-figure.highlight.c .code:after {
-  content: "C"
-}
-
-figure.highlight.java .code:after {
-  content: "JAVA"
-}
-
-figure.highlight.cpp .code:after {
-  content: "CPP"
-}
-
-figure.highlight.cpp .code:after {
-  content: 'C++'
+@each $lang in $supported-lang {
+  figure.highlight.#{$lang} .code:after {
+    @if $lang == 'cpp' {
+      content: 'C++';
+    } @else if $lang == 'js' {
+      content: 'JAVASCRIPT';
+    } @else {
+      content: to-upper-case($lang);
+    }
+  }
 }
 
 pre {
@@ -200,6 +143,10 @@ pre .constant {
 pre .keyword,
 pre .attribute {
   color: #e96900 !important
+}
+
+pre .attr {
+  color: #52bff6;
 }
 
 pre .number,
@@ -255,6 +202,10 @@ pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
   color: #42b983 !important
+}
+
+pre .meta {
+  color: #a97ff6;
 }
 
 pre .comment,
@@ -612,7 +563,6 @@ tt {
 }
 
 @media screen and (max-width: 320px) {
-
   #fb_comments .c_content,
   #fb_comments .comment_body {
     margin-left: 57px;
