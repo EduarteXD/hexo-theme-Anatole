@@ -16,8 +16,8 @@ mixin make_post(item, is_detail)
 			.info
 				i.fa-solid.fa-sun
 				span.date= date(item.date, 'YYYY-MM-DD')
-				if theme.duoshuo || theme.disqus
-					i.fa.fa-comment
+				if theme.disqus
+					i.fa-solid.fa-comment
 					a(href= url_for(item.path + "#comments"))= __('Comments')
 				if item.tags
 					i.fa-solid.fa-tag
@@ -55,13 +55,15 @@ mixin postList()
 				if firstYear
 					| <div class="listing-title">
 					!= year
-					| </div><ul class="listing">
+					| </div>
 					- firstYear = false;
 				else
-					| </ul><div class="listing-title">
+					| </ul>
+					| <div class="listing-title">
 					!= year
-					| </div><ul class="listing">
+					| </div>
 
+			| <ul class="listing">
 			.listing-item
 				.listing-post
 					a(href= url_for(item.path), title= item.title)= item.title

@@ -28,6 +28,7 @@
   --main-listing: #8F8F8F;
   --main-scrollbar: #0000007F;
   --main-scrollbar-bg: #00000010;
+  --main-btn-border: #00000026;
 }
 
 html {
@@ -53,6 +54,7 @@ html {
   --main-lstitle: #fff;
   --main-listing: #eee;
   --main-scrollbar-bg: #ffffff40;
+  --main-btn-border: #ffffff26;
 }
 #dark-mode img {
   filter: drop-shadow(0 0 3px var(--main-dayLight));
@@ -575,12 +577,12 @@ a.btn {
   position: relative;
   outline: 0;
   color: rgba(0, 0, 0, 0.44);
-  background: rgba(0, 0, 0, 0);
+  background: rgba(127, 127, 127, 0);
   font-size: 14px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--main-btn-border);
   white-space: nowrap;
   font-weight: 400;
   font-style: normal;

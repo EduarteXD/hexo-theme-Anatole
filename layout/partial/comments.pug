@@ -32,8 +32,8 @@ if theme.valine
           })
 
 
-if theme.utterances
-    #utter() 
+if theme.utterances 
+    #utter()
     script.
         (function() {
             let utterScript = document.createElement('script');
@@ -42,7 +42,7 @@ if theme.utterances
             utterScript.type = 'text/javascript';
             utterScript.setAttribute('repo', '#{theme.utterances.repo}');
             utterScript.setAttribute ('issue-term', 'pathname');
-            if (location.hash === "#dark") {
+            if (location.hash === '#dark') {
                 utterScript.setAttribute('theme', 'github-dark');
             } else {
                 utterScript.setAttribute('theme', 'github-light');
