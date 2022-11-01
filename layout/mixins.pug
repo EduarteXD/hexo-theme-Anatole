@@ -53,14 +53,14 @@ mixin postList()
 			- year = change ? itemYear : year;
 			if change
 				if firstYear
-					| '<div class="listing-title">'
+					| <div class="listing-title">
 					!= year
-					| '</div><ul class="listing">'
+					| </div><ul class="listing">
 					- firstYear = false;
 				else
-					| '</ul><div class="listing-title">'
+					| </ul><div class="listing-title">
 					!= year
-					| '</div><ul class="listing">'
+					| </div><ul class="listing">
 
 			.listing-item
 				.listing-post
