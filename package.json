@@ -1,11 +1,11 @@
 {
-  "name": "hexo-theme-Anatole",
+  "name": "hexo-theme-anatole",
   "version": "1.0.0",
   "description": "A white and simple hexo theme, originated from a Farbox theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass ./source/css/style.scss ./source/css/style.css --style compressed && sass ./source/css/blog_basic.scss ./source/css/blog_basic.css --style compressed"
+    "compile": "sass --no-source-map ./source/css/style.scss ./source/css/style.css --style compressed &sass --no-source-map ./source/css/blog_basic.scss ./source/css/blog_basic.css --style compressed"
   },
   "repository": {
     "type": "git",
