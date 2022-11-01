@@ -7,5 +7,4 @@ exec(`sass --no-source-map ${__dirname}/../source/css/blog_basic.scss ${__dirnam
 exec(`sass ${__dirname}/../source/css/style.scss ${__dirname}/../source/css/style.css`)
 exec(`sass ${__dirname}/../source/css/blog_basic.scss ${__dirname}/../source/css/blog_basic.css`)
 
-console.clear()
-console.log('✅ Done!')
+exec(`tsc`)

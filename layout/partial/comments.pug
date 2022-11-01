@@ -27,7 +27,7 @@ if theme.valine
             app_id:'#{theme.valine.appid}',
             app_key:'#{theme.valine.appkey}',
             placeholder:'#{theme.valine.placeholder}',
-            path: window.location.pathname,
+            path: location.pathname,
             avatar:'#{theme.valine.avatar}'
           })
 
@@ -42,7 +42,7 @@ if theme.utterances
             utterScript.type = 'text/javascript';
             utterScript.setAttribute('repo', '#{theme.utterances.repo}');
             utterScript.setAttribute ('issue-term', 'pathname');
-            if (window.location.hash === "#dark") {
+            if (location.hash === "#dark") {
                 utterScript.setAttribute('theme', 'github-dark');
             } else {
                 utterScript.setAttribute('theme', 'github-light');

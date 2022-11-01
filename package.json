@@ -22,7 +22,8 @@
     "url": "https://github.com/EduarteXD/hexo-theme-Anatole/issues"
   },
   "homepage": "https://github.com/EduarteXD/hexo-theme-Anatole#readme",
-  "dependencies": {
-    "sass": "^1.55.0"
+  "devDependencies": {
+    "sass": "^1.55.0",
+    "typescript": "^4.8.4"
   }
 }

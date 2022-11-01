@@ -42,13 +42,13 @@
           let frame = document.getElementsByTagName('iframe')[0];
           if (html.id !== 'dark-mode') {
             html.id = 'dark-mode';
-            window.location.hash = "#dark";
+            location.hash = "#dark";
             if (frame) {
               frame.contentWindow.postMessage({type:"set-theme", theme:"github-dark"}, "*");
             }
           } else {
             html.id = 'light-mode';
-            window.location.hash="#light";
+            location.hash="#light";
             if (frame) {
               frame.contentWindow.postMessage({type:"set-theme", theme:"github-light"}, "*");
             }

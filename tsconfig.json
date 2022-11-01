@@ -1,0 +1,11 @@
+{
+    "files": [
+        "ts/interceptor.ts"
+    ],
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "outDir": "./source/js",
+        "removeComments": true
+    }
+}
