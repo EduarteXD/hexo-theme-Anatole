@@ -7,7 +7,7 @@
   --main-sun: #fbf693;
   /* light theme */
   --main-bgcolor: #fff;
-  --main-content: #0000007f;
+  --main-content: #0000005f;
   --main-divider: #f2f2f2;
   --main-h1: var(--main-content);
   --main-h2: #5f5f5f;
@@ -26,6 +26,8 @@
   --main-subtitle: #565654;
   --main-lstitle: #666666;
   --main-listing: #8F8F8F;
+  --main-scrollbar: #0000007F;
+  --main-scrollbar-bg: #00000010;
 }
 
 html {
@@ -50,6 +52,7 @@ html {
   --main-subtitle: #ddd;
   --main-lstitle: #fff;
   --main-listing: #eee;
+  --main-scrollbar-bg: #ffffff40;
 }
 #dark-mode img {
   filter: drop-shadow(0 0 3px var(--main-dayLight));
@@ -766,6 +769,22 @@ input:checked ~ .slider::before {
   background-color: var(--main-sun);
   box-shadow: 0 0 12px rgba(153, 153, 153, 0.3137254902);
   backdrop-filter: brightness(5);
+}
+
+/* mac like scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: var(--main-scrollbar);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1em;
+  background-color: var(--main-scrollbar-bg);
 }
 
 /*# sourceMappingURL=style.css.map */

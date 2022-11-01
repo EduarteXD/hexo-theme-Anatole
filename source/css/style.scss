@@ -1,36 +1,39 @@
 :root {
 	/* toggler */
-	--main-light:    #d8dbe0;
+	--main-light: #d8dbe0;
 	--main-dayLight: #f8f8f8;
-	--main-dark:     #28292c;
-	--main-sun:      #fbf693;
+	--main-dark: #28292c;
+	--main-sun: #fbf693;
 
 	/* light theme */
 	--main-bgcolor: #fff;
-	--main-content: #0000007f;
+	--main-content: #0000005f;
 	--main-divider: #f2f2f2;
 
 	--main-h1: var(--main-content);
 	--main-h2: #5f5f5f;
 	--main-h3: #464646;
 	--main-h4: #5F5F5F;
-	--main-a:  #5f5f5f;
-	--main-p:  #5f5f5f;
+	--main-a: #5f5f5f;
+	--main-p: #5f5f5f;
 
-	--main-navlink:       #5a5a5a;
+	--main-navlink: #5a5a5a;
 	--main-navlinkactive: #6e6e6e;
-	--main-identifier:    #444;
+	--main-identifier: #444;
 
-	--main-linkactive:   #4786D6;
+	--main-linkactive: #4786D6;
 	--main-linkinactive: #588fd6;
-	--main-linklight:    #bbb;
+	--main-linklight: #bbb;
 
 	--main-comment: #666;
 
-	--main-title:    #464646;
+	--main-title: #464646;
 	--main-subtitle: #565654;
-	--main-lstitle:  #666666;
-	--main-listing:  #8F8F8F;
+	--main-lstitle: #666666;
+	--main-listing: #8F8F8F;
+
+	--main-scrollbar: #0000007F;
+	--main-scrollbar-bg: #00000010;
 }
 
 html {
@@ -48,16 +51,18 @@ html {
 	--main-h2: #eee;
 	--main-h3: #ddd;
 	--main-h4: #ccc;
-	--main-a:  #ddd;
-	--main-p:  #ddd;
+	--main-a: #ddd;
+	--main-p: #ddd;
 
-	--main-navlink:       #c2c2c2;
+	--main-navlink: #c2c2c2;
 	--main-navlinkactive: #888;
 
-	--main-title:    #eee;
+	--main-title: #eee;
 	--main-subtitle: #ddd;
-	--main-lstitle:  #fff;
-	--main-listing:  #eee;
+	--main-lstitle: #fff;
+	--main-listing: #eee;
+
+	--main-scrollbar-bg: #ffffff40;
 
 	img {
 		filter: drop-shadow(0 0 3px var(--main-dayLight));
@@ -891,4 +896,20 @@ input:checked~.slider::before {
 	background-color: var(--main-sun);
 	box-shadow: 0 0 12px #99999950;
 	backdrop-filter: brightness(5);
+}
+
+/* mac like scrollbar */
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 1em;
+	background-color: var(--main-scrollbar);
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 1em;
+	background-color: var(--main-scrollbar-bg);
 }

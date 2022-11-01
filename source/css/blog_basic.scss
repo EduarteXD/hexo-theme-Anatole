@@ -183,7 +183,6 @@ pre .subst,
 pre .haskell .type,
 pre .preprocessor,
 pre .ruby .class .parent,
-pre .built_in,
 pre .sql .aggregate,
 pre .django .template_tag,
 pre .django .variable,
@@ -202,6 +201,10 @@ pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
   color: #42b983;
+}
+
+pre .built_in {
+  color: #f5d833;
 }
 
 pre .meta {
