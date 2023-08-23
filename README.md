@@ -14,6 +14,4 @@ I am convinced that a basic rule to coordinate a theme is to respect the origina
 
 ![](https://i.loli.net/2018/10/08/5bbb6579cceeb.png)
 
-增加了一个夜间模式
-
-<img width="1470" alt="截屏2022-10-31 下午7 57 59" src="https://user-images.githubusercontent.com/54500106/199002664-212f4d3b-249d-45b1-bc4e-af931386cecc.png">
+update: 增加了一个夜间模式
